@@ -25,6 +25,12 @@ jobs:
       - name: Generate source files
         run: bash generate_sources.sh
 
+
+
+      - name: Debug - list files
+        run: find . -name "*.gradle" | head -20
+
+
       - name: Install Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
